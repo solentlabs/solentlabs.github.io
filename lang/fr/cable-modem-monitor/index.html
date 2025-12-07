@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cable Modem Monitor — Un Projet Solent Labs™</title>
+    <meta name="description" content="Surveillance de signal DOCSIS pour Home Assistant. Suivez les niveaux de puissance, SNR et erreurs sur tous les canaux.">
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="../../../assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+    <link rel="alternate" hreflang="en" href="https://solentlabs.io/cable-modem-monitor/" />
+    <link rel="alternate" hreflang="pt-br" href="https://solentlabs.io/lang/pt-br/cable-modem-monitor/" />
+    <link rel="alternate" hreflang="es" href="https://solentlabs.io/lang/es/cable-modem-monitor/" />
+    <link rel="alternate" hreflang="de" href="https://solentlabs.io/lang/de/cable-modem-monitor/" />
+    <link rel="alternate" hreflang="fr" href="https://solentlabs.io/lang/fr/cable-modem-monitor/" />
+    <link rel="alternate" hreflang="zh" href="https://solentlabs.io/lang/zh/cable-modem-monitor/" />
+    <link rel="alternate" hreflang="x-default" href="https://solentlabs.io/cable-modem-monitor/" />
+    <script data-goatcounter="https://solentlabs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="../" class="nav-brand">
+            <img src="../../../assets/images/solent-labs-web.png" alt="Solent Labs" class="nav-logo">
+        </a>
+        <div class="nav-links">
+            <a href="../cable-modem-monitor/" class="active">Cable Modem Monitor</a>
+        </div>
+        <div class="lang-switcher-inline">
+            <a href="../../../">EN</a> | <a href="../../pt-br/">PT</a> | <a href="../../es/">ES</a> | <a href="../../de/">DE</a> | <a href="#" class="active">FR</a> | <a href="../../zh/">ZH</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Cable Modem Monitor</h1>
+            <p class="subtitle">Surveillance de signal DOCSIS pour Home Assistant.</p>
+            <div class="stats-row">
+                <span class="stat">10+ modems</span>
+                <span class="stat">500+ tests</span>
+                <span class="stat">6 langues</span>
+            </div>
+        </header>
+
+        <article class="content">
+            <section>
+                <h2>Ce Que Ça Fait</h2>
+                <p>Extrait les métriques de signal directement de l'interface web de votre modem câble et les expose comme capteurs Home Assistant. Suivez la puissance downstream, upstream, le SNR et les compteurs d'erreurs sur tous les canaux — avec graphiques historiques et alertes.</p>
+                <div class="screenshot-grid">
+                    <figure class="screenshot">
+                        <img src="../../../assets/images/cmm/dashboard-screenshot.png" alt="Cable Modem Status Dashboard">
+                    </figure>
+                    <div class="screenshot-pair">
+                        <figure class="screenshot">
+                            <img src="../../../assets/images/cmm/downstream-power-levels.png" alt="Downstream Power Levels Graph">
+                        </figure>
+                        <figure class="screenshot">
+                            <img src="../../../assets/images/cmm/signal-to-noise-ratio.png" alt="Signal-to-Noise Ratio Graph">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="install-section">
+                <h2>Installation</h2>
+                <p>Disponible dans HACS (Home Assistant Community Store). Installation en un clic, mises à jour automatiques.</p>
+                <p class="small">Ou installez manuellement depuis GitHub.</p>
+                <div class="install-actions">
+                    <a href="https://github.com/kwschulz/cable_modem_monitor" class="cta-button">Voir sur GitHub</a>
+                </div>
+                <p class="badge-note">Logo HACS approuvé</p>
+            </section>
+
+            <section>
+                <h2>Modems Supportés</h2>
+                <div class="modem-list">
+                    <p>Arris — S33, SB6141, SB6190, SB8200</p>
+                    <p>Motorola — MB7621, MB8600, MB8611</p>
+                    <p>Netgear — C3700, CM600, CM2000 Nighthawk</p>
+                    <p>Technicolor — TC4400, XB7/CGM4331COM</p>
+                </div>
+                <p class="small"><a href="https://github.com/kwschulz/cable_modem_monitor#supported-modems">Liste complète de compatibilité</a></p>
+            </section>
+
+            <section class="contribute-section">
+                <h2>Contribuer un Modem</h2>
+                <p>Vous ne voyez pas votre modem ? L'outil de capture HAR vous permet de contribuer le support sans écrire de code. Capturez le trafic réseau de votre navigateur et soumettez-le — le support de parser suivra. Votre contribution aide toute la communauté.</p>
+                <div class="contribute-actions">
+                    <a href="https://github.com/kwschulz/cable_modem_monitor/blob/main/docs/CAPTURE_GUIDE.md" class="cta-button">Guide de Capture</a>
+                    <a href="https://github.com/kwschulz/cable_modem_monitor/issues" class="cta-button secondary">Signaler un problème</a>
+                </div>
+            </section>
+        </article>
+
+        <footer>
+            <p>Un projet Solent Labs™.</p>
+        </footer>
+    </div>
+</body>
+</html>

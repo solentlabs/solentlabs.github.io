@@ -7,14 +7,27 @@ Public website for [solentlabs.io](https://solentlabs.io).
 ```
 ├── index.html              # English (default)
 ├── lang/
-│   ├── pt-br/index.html    # Brazilian Portuguese
+│   ├── pt-BR/index.html    # Brazilian Portuguese
 │   ├── es/index.html       # Spanish
 │   ├── de/index.html       # German
-│   └── fr/index.html       # French
+│   ├── fr/index.html       # French
+│   └── zh-CN/index.html    # Chinese (Simplified)
 ├── assets/
 │   ├── css/styles.css
 │   └── images/
+├── tests/                  # Playwright tests
+│   ├── pages.spec.ts
+│   ├── language.spec.ts
+│   └── seo.spec.ts
+├── .github/workflows/      # CI configuration
 └── CNAME
+```
+
+## Testing
+
+```bash
+npm install
+npx playwright test
 ```
 
 ## Build

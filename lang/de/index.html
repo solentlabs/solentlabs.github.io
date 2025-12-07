@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solent Labs™</title>
+    <meta name="description" content="Klarheit für komplexe Systeme. Open Source im Kern.">
     <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
     <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
     <link rel="stylesheet" href="../../assets/css/styles.css">
@@ -12,46 +13,87 @@
     <link rel="alternate" hreflang="es" href="https://solentlabs.io/lang/es/" />
     <link rel="alternate" hreflang="de" href="https://solentlabs.io/lang/de/" />
     <link rel="alternate" hreflang="fr" href="https://solentlabs.io/lang/fr/" />
+    <link rel="alternate" hreflang="zh" href="https://solentlabs.io/lang/zh/" />
     <link rel="alternate" hreflang="x-default" href="https://solentlabs.io/" />
     <script data-goatcounter="https://solentlabs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-    <nav class="lang-switcher">
-        <a href="../../" onclick="localStorage.setItem('solent-lang','en')">EN</a> | <a href="../pt-br/" onclick="localStorage.setItem('solent-lang','pt')">PT-BR</a> | <a href="../es/" onclick="localStorage.setItem('solent-lang','es')">ES</a> | <a href="#" class="active" onclick="localStorage.setItem('solent-lang','de')">DE</a> | <a href="../fr/" onclick="localStorage.setItem('solent-lang','fr')">FR</a>
+    <nav class="top-nav">
+        <a href="./" class="nav-brand">
+            <img src="../../assets/images/solent-labs-web.png" alt="Solent Labs" class="nav-logo">
+        </a>
+        <div class="nav-links">
+            <a href="cable-modem-monitor/">Cable Modem Monitor</a>
+        </div>
+        <div class="lang-switcher-inline">
+            <a href="../../">EN</a> | <a href="../pt-br/">PT</a> | <a href="../es/">ES</a> | <a href="#" class="active">DE</a> | <a href="../fr/">FR</a> | <a href="../zh/">ZH</a>
+        </div>
     </nav>
 
     <div class="container">
-        <header>
-            <img src="../../assets/images/solent-labs-web.png" alt="Solent Labs">
-            <p class="tagline">Wir entwickeln Werkzeuge, die Klarheit in komplexe Systeme bringen.</p>
+        <header class="hero">
+            <img src="../../assets/images/solent-labs-web.png" alt="Solent Labs" class="hero-logo">
+            <h1>Klarheit für komplexe Systeme</h1>
+            <p class="hero-subtitle">Open Source im Kern.</p>
         </header>
 
-        <h2>Projekte</h2>
+        <section class="approach">
+            <p>Komplexe Systeme verbergen ihre Daten. Geräte verstecken Metriken in umständlichen Oberflächen. APIs liefern nicht, was man braucht. Die Informationen existieren — sie sind nur nicht zugänglich.</p>
+        </section>
 
-        <div class="project">
-            <h3><a href="https://github.com/kwschulz/cable_modem_monitor">Cable Modem Monitor</a></h3>
-            <p>Home Assistant Integration zur Überwachung von DOCSIS-Kabelmodem-Signalen. Gemeinschaftlich unterstützt mit über 10 Modem-Modellen.</p>
-        </div>
+        <section class="product-feature">
+            <h2>Produkte</h2>
+            <div class="product-card featured">
+                <h3>Cable Modem Monitor</h3>
+                <p>DOCSIS-Signalüberwachung für Home Assistant. Verfolgen Sie Signalstärke, Rauschmargen und Fehler über alle Kanäle Ihres Modems. 10+ unterstützte Modems. 500+ Tests.</p>
+                <div class="product-actions">
+                    <a href="cable-modem-monitor/" class="cta-button">Mehr erfahren</a>
+                    <a href="https://github.com/kwschulz/cable_modem_monitor" class="cta-button secondary">GitHub</a>
+                </div>
+            </div>
+        </section>
 
-        <div class="project">
-            <h3>HA Internet Health Monitor <span class="badge">Demnächst</span></h3>
-            <p>Gateway-Latenz, Jitter, Paketverlust und DNS-Überwachung für Home Assistant.</p>
-        </div>
+        <section class="philosophy">
+            <h2>Entwicklungsprinzipien</h2>
+            <p class="section-intro">Die Standards hinter jedem Projekt.</p>
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <strong>KI-beschleunigt:</strong>
+                    <p>KI als Kraftmultiplikator. So bauen kleine Teams in großem Maßstab.</p>
+                </div>
+                <div class="philosophy-item">
+                    <strong>Richtig gebaut:</strong>
+                    <p>Lieferung ohne technische Schulden. KI ermöglicht solide Architektur und Fundamente, gestützt durch testgetriebene Entwicklung.</p>
+                </div>
+                <div class="philosophy-item">
+                    <strong>Ursachenanalyse:</strong>
+                    <p>Das System reparieren, nicht das Symptom. Bugs treiben Entdeckungen an — Diagnosetools, die dabei entstehen, werden zu Vermögenswerten.</p>
+                </div>
+                <div class="philosophy-item">
+                    <strong>DRY by Design:</strong>
+                    <p>Wiederhole dich nicht. Abstraktionen, die skalieren, Lösungen, die bestehen — dann den nächsten Berg erklimmen.</p>
+                </div>
+            </div>
+        </section>
 
-        <h2>Warum "Solent"?</h2>
+        <section class="why-solent">
+            <h2>Warum "Solent"?</h2>
+            <p class="section-intro">Zwei Bedeutungen, ein Name.</p>
+            <p>Der Solent ist das Vorstag-Kabel an einem Kutter-getakelten Segelboot — die Leine, die unter Druck hält. Nautisches Erbe ist hier tief verwurzelt.</p>
+            <p>Die Solent-Meerenge zwischen England und der Isle of Wight ist berühmt für Strömungen, die selbst erfahrene Segler verwirren. Ein passender Name, um Klarheit in komplexe Systeme zu bringen.</p>
+        </section>
 
-        <div class="story">
-            <p>Zwei Bedeutungen, ein Name.</p>
-
-            <p><strong>Das Vorstag:</strong> Ein Solent ist das Vorstag, an dem bei einer Kutterrigg das Stagsegel befestigt wird. Dieses Projekt ehrt eine mehrgenerationenübergreifende Seglerfamilie und unzählige Stunden auf dem Wasser. Die Diagonale im Logo repräsentiert dieses Stag.</p>
-
-            <p><strong>Die Meerenge:</strong> Der Solent, zwischen England und der Isle of Wight, ist berühmt für seine komplexen, verborgenen Gezeitenmuster, die selbst erfahrene Segler herausfordern. Unsere Werkzeuge tun dasselbe für Technologie — sie bringen Klarheit und Transparenz in komplexe, verborgene Systeme.</p>
-
-            <p><strong>Die Methode:</strong> KI-gestützte Entwicklung ist in der DNA dieser Marke. Jedes Projekt nutzt KI als Kraftmultiplikator und verstärkt, was ein schlankes Team bauen und pflegen kann.</p>
-        </div>
+        <section class="community">
+            <h2>Community</h2>
+            <p>Offen entwickelt. Beiträge willkommen.</p>
+            <div class="community-links">
+                <a href="https://github.com/solentlabs" class="cta-button">GitHub</a>
+                <a href="https://github.com/kwschulz/cable_modem_monitor/blob/main/docs/CAPTURE_GUIDE.md" class="cta-button secondary">Ein Modem beitragen</a>
+            </div>
+        </section>
 
         <footer>
-            <p>Ein Solent Labs™ Projekt.</p>
+            <p>Solent Labs™</p>
         </footer>
     </div>
 </body>

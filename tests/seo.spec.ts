@@ -2,10 +2,11 @@ import { test, expect } from '@playwright/test';
 
 const PAGES = [
   { path: '/', lang: 'en' },
-  { path: '/lang/pt-br/', lang: 'pt-BR' },
+  { path: '/lang/pt-br/', lang: 'pt-br' },
   { path: '/lang/es/', lang: 'es' },
   { path: '/lang/de/', lang: 'de' },
   { path: '/lang/fr/', lang: 'fr' },
+  { path: '/lang/zh/', lang: 'zh' },
 ];
 
 test.describe('SEO Elements', () => {
@@ -20,7 +21,7 @@ test.describe('SEO Elements', () => {
 
       // Check all hreflang tags exist
       const hreflangs = await pwPage.locator('link[rel="alternate"][hreflang]').all();
-      expect(hreflangs.length).toBeGreaterThanOrEqual(5);
+      expect(hreflangs.length).toBeGreaterThanOrEqual(6);
 
       // Verify x-default exists
       const xDefault = pwPage.locator('link[hreflang="x-default"]');
@@ -32,6 +33,7 @@ test.describe('SEO Elements', () => {
       await expect(pwPage.locator('link[hreflang="es"]')).toHaveAttribute('href', 'https://solentlabs.io/lang/es/');
       await expect(pwPage.locator('link[hreflang="de"]')).toHaveAttribute('href', 'https://solentlabs.io/lang/de/');
       await expect(pwPage.locator('link[hreflang="fr"]')).toHaveAttribute('href', 'https://solentlabs.io/lang/fr/');
+      await expect(pwPage.locator('link[hreflang="zh"]')).toHaveAttribute('href', 'https://solentlabs.io/lang/zh/');
     });
 
     test(`${page.lang} page has correct html lang attribute`, async ({ page: pwPage }) => {
@@ -78,6 +80,17 @@ test.describe('SEO Elements', () => {
     const viewport = page.locator('meta[name="viewport"]');
     await expect(viewport).toHaveAttribute('content', /width=device-width/);
   });
+
+  test('has meta description', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('solent-lang', 'en');
+    });
+
+    await page.goto('/');
+
+    const description = page.locator('meta[name="description"]');
+    await expect(description).toHaveAttribute('content', /Bringing clarity to complex systems/);
+  });
 });
 
 test.describe('Analytics', () => {
@@ -115,12 +128,12 @@ test.describe('Accessibility', () => {
 
     await page.goto('/');
 
-    // h2 elements exist (we use h2 as top level since h1 is implicit in logo)
+    // h1 exists (main headline)
+    const h1s = await page.locator('h1').all();
+    expect(h1s.length).toBe(1);
+
+    // h2 elements exist for sections
     const h2s = await page.locator('h2').all();
     expect(h2s.length).toBeGreaterThanOrEqual(2);
-
-    // h3 elements exist for project titles
-    const h3s = await page.locator('h3').all();
-    expect(h3s.length).toBeGreaterThanOrEqual(2);
   });
 });

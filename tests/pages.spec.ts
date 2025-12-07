@@ -6,6 +6,7 @@ const LANGUAGES = [
   { code: 'es', path: '/lang/es/', title: 'Solent Labs™' },
   { code: 'de', path: '/lang/de/', title: 'Solent Labs™' },
   { code: 'fr', path: '/lang/fr/', title: 'Solent Labs™' },
+  { code: 'zh', path: '/lang/zh/', title: 'Solent Labs™' },
 ];
 
 test.describe('Page Rendering', () => {
@@ -19,7 +20,7 @@ test.describe('Page Rendering', () => {
       // Logo is visible
       await expect(page.locator('header img')).toBeVisible();
 
-      // Projects section exists
+      // Building Principles section exists
       await expect(page.locator('h2').first()).toBeVisible();
 
       // Footer is visible
@@ -30,35 +31,37 @@ test.describe('Page Rendering', () => {
     test(`${lang.code.toUpperCase()} page has working language switcher`, async ({ page }) => {
       await page.goto(lang.path);
 
-      // Language switcher exists with all 5 options
-      const langSwitcher = page.locator('nav.lang-switcher');
+      // Language switcher exists with all 6 options
+      const langSwitcher = page.locator('.lang-switcher-inline');
       await expect(langSwitcher).toBeVisible();
-      await expect(langSwitcher.locator('a')).toHaveCount(5);
+      await expect(langSwitcher.locator('a')).toHaveCount(6);
     });
   }
 });
 
 test.describe('Content', () => {
-  test('Home page has project links', async ({ page }) => {
+  test('Home page has product section', async ({ page }) => {
     await page.goto('/');
 
-    // Cable Modem Monitor link
-    const cmmLink = page.locator('a[href*="cable_modem_monitor"]');
+    // Cable Modem Monitor link exists
+    const cmmLink = page.locator('a[href*="cable-modem-monitor"]').first();
     await expect(cmmLink).toBeVisible();
-    await expect(cmmLink).toContainText('Cable Modem Monitor');
-
-    // Internet Health Monitor (coming soon)
-    await expect(page.locator('text=Internet Health Monitor')).toBeVisible();
-    await expect(page.locator('.badge')).toContainText('Coming Soon');
   });
 
   test('Why Solent section exists', async ({ page }) => {
     await page.goto('/');
 
     await expect(page.locator('text=Why "Solent"?')).toBeVisible();
-    await expect(page.locator('text=The stay:')).toBeVisible();
-    await expect(page.locator('text=The strait:')).toBeVisible();
-    await expect(page.locator('text=The method:')).toBeVisible();
+  });
+
+  test('Building Principles section exists', async ({ page }) => {
+    await page.goto('/');
+
+    await expect(page.locator('text=Building Principles')).toBeVisible();
+    await expect(page.locator('text=AI-accelerated')).toBeVisible();
+    await expect(page.locator('text=Built right')).toBeVisible();
+    await expect(page.locator('text=Root cause')).toBeVisible();
+    await expect(page.locator('text=DRY by design')).toBeVisible();
   });
 });
 
@@ -68,6 +71,6 @@ test.describe('Responsive Design', () => {
     await page.goto('/');
 
     await expect(page.locator('header img')).toBeVisible();
-    await expect(page.locator('nav.lang-switcher')).toBeVisible();
+    await expect(page.locator('.lang-switcher-inline')).toBeVisible();
   });
 });

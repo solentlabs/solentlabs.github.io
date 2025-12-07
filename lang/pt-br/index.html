@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solent Labs™</title>
+    <meta name="description" content="Trazendo clareza para sistemas complexos. Open source no núcleo.">
     <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
     <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
     <link rel="stylesheet" href="../../assets/css/styles.css">
@@ -12,46 +13,87 @@
     <link rel="alternate" hreflang="es" href="https://solentlabs.io/lang/es/" />
     <link rel="alternate" hreflang="de" href="https://solentlabs.io/lang/de/" />
     <link rel="alternate" hreflang="fr" href="https://solentlabs.io/lang/fr/" />
+    <link rel="alternate" hreflang="zh" href="https://solentlabs.io/lang/zh/" />
     <link rel="alternate" hreflang="x-default" href="https://solentlabs.io/" />
     <script data-goatcounter="https://solentlabs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-    <nav class="lang-switcher">
-        <a href="../../" onclick="localStorage.setItem('solent-lang','en')">EN</a> | <a href="#" class="active" onclick="localStorage.setItem('solent-lang','pt')">PT-BR</a> | <a href="../es/" onclick="localStorage.setItem('solent-lang','es')">ES</a> | <a href="../de/" onclick="localStorage.setItem('solent-lang','de')">DE</a> | <a href="../fr/" onclick="localStorage.setItem('solent-lang','fr')">FR</a>
+    <nav class="top-nav">
+        <a href="./" class="nav-brand">
+            <img src="../../assets/images/solent-labs-web.png" alt="Solent Labs" class="nav-logo">
+        </a>
+        <div class="nav-links">
+            <a href="cable-modem-monitor/">Cable Modem Monitor</a>
+        </div>
+        <div class="lang-switcher-inline">
+            <a href="../../">EN</a> | <a href="#" class="active">PT</a> | <a href="../es/">ES</a> | <a href="../de/">DE</a> | <a href="../fr/">FR</a> | <a href="../zh/">ZH</a>
+        </div>
     </nav>
 
     <div class="container">
-        <header>
-            <img src="../../assets/images/solent-labs-web.png" alt="Solent Labs">
-            <p class="tagline">Criando ferramentas que trazem clareza para sistemas complexos.</p>
+        <header class="hero">
+            <img src="../../assets/images/solent-labs-web.png" alt="Solent Labs" class="hero-logo">
+            <h1>Trazendo Clareza para Sistemas Complexos</h1>
+            <p class="hero-subtitle">Open source no núcleo.</p>
         </header>
 
-        <h2>Projetos</h2>
+        <section class="approach">
+            <p>Sistemas complexos escondem seus dados. Dispositivos enterram métricas em interfaces desajeitadas. APIs não expõem o que você precisa. A informação existe — simplesmente não está acessível.</p>
+        </section>
 
-        <div class="project">
-            <h3><a href="https://github.com/kwschulz/cable_modem_monitor">Cable Modem Monitor</a></h3>
-            <p>Integração para Home Assistant para monitoramento de sinal de cable modem DOCSIS. Suporte colaborativo com mais de 10 modelos de modem.</p>
-        </div>
+        <section class="product-feature">
+            <h2>Produtos</h2>
+            <div class="product-card featured">
+                <h3>Cable Modem Monitor</h3>
+                <p>Monitoramento de sinal DOCSIS para Home Assistant. Acompanhe potência do sinal, margens de ruído e erros em todos os canais do seu modem. 10+ modems suportados. 500+ testes.</p>
+                <div class="product-actions">
+                    <a href="cable-modem-monitor/" class="cta-button">Saiba mais</a>
+                    <a href="https://github.com/kwschulz/cable_modem_monitor" class="cta-button secondary">GitHub</a>
+                </div>
+            </div>
+        </section>
 
-        <div class="project">
-            <h3>HA Internet Health Monitor <span class="badge">Em Breve</span></h3>
-            <p>Monitoramento de latência do gateway, jitter, perda de pacotes e DNS para Home Assistant.</p>
-        </div>
+        <section class="philosophy">
+            <h2>Princípios de Construção</h2>
+            <p class="section-intro">Os padrões por trás de cada projeto.</p>
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <strong>Acelerado por IA:</strong>
+                    <p>IA como multiplicador de força. É como equipes pequenas constroem em escala.</p>
+                </div>
+                <div class="philosophy-item">
+                    <strong>Bem construído:</strong>
+                    <p>Entrega sem dívida. A IA permite arquitetura sólida e fundamentos respaldados por desenvolvimento orientado a testes.</p>
+                </div>
+                <div class="philosophy-item">
+                    <strong>Causa raiz:</strong>
+                    <p>Consertar o sistema, não o sintoma. Bugs impulsionam descobertas — ferramentas de diagnóstico construídas no caminho se tornam ativos.</p>
+                </div>
+                <div class="philosophy-item">
+                    <strong>DRY por design:</strong>
+                    <p>Não se repita. Abstrações que escalam, soluções que duram — depois escalar a próxima montanha.</p>
+                </div>
+            </div>
+        </section>
 
-        <h2>Por que "Solent"?</h2>
+        <section class="why-solent">
+            <h2>Por que "Solent"?</h2>
+            <p class="section-intro">Dois significados, um nome.</p>
+            <p>O solent é o cabo do estai de proa em um veleiro com mastreação de cúter — a linha que aguenta sob pressão. A herança náutica é profunda aqui.</p>
+            <p>O estreito Solent, entre a Inglaterra e a Ilha de Wight, é famoso por correntes que confundem até marinheiros experientes. Um nome apropriado para trazer clareza a sistemas complexos.</p>
+        </section>
 
-        <div class="story">
-            <p>Dois significados, um nome.</p>
-
-            <p><strong>O estai:</strong> Um solent é o cabo de estai de proa ao qual uma vela de estai se prende em um veleiro com armação de cúter. Este projeto homenageia uma família de velejadores de várias gerações e incontáveis horas na água. A diagonal do logo representa esse estai.</p>
-
-            <p><strong>O estreito:</strong> O Solent, entre a Inglaterra e a Ilha de Wight, é famoso por seus padrões de maré complexos e ocultos que desafiam até marinheiros experientes. Nossas ferramentas fazem o mesmo para a tecnologia — trazendo clareza e transparência para sistemas complexos e ocultos.</p>
-
-            <p><strong>O método:</strong> O desenvolvimento assistido por IA está no DNA desta marca. Cada projeto utiliza IA como um multiplicador de força, ampliando o que uma equipe enxuta pode construir e manter.</p>
-        </div>
+        <section class="community">
+            <h2>Comunidade</h2>
+            <p>Desenvolvido abertamente. Contribuições são bem-vindas.</p>
+            <div class="community-links">
+                <a href="https://github.com/solentlabs" class="cta-button">GitHub</a>
+                <a href="https://github.com/kwschulz/cable_modem_monitor/blob/main/docs/CAPTURE_GUIDE.md" class="cta-button secondary">Contribuir um modem</a>
+            </div>
+        </section>
 
         <footer>
-            <p>Um projeto Solent Labs™.</p>
+            <p>Solent Labs™</p>
         </footer>
     </div>
 </body>
