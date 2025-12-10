@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 
 const LANGUAGES = [
-  { code: 'en', path: '/', title: 'Solent Labs™' },
-  { code: 'pt-br', path: '/lang/pt-br/', title: 'Solent Labs™' },
-  { code: 'es', path: '/lang/es/', title: 'Solent Labs™' },
-  { code: 'de', path: '/lang/de/', title: 'Solent Labs™' },
-  { code: 'fr', path: '/lang/fr/', title: 'Solent Labs™' },
-  { code: 'zh', path: '/lang/zh/', title: 'Solent Labs™' },
+  { code: 'en', path: '/', title: 'Solent Labs™ — Open Source Network Monitoring' },
+  { code: 'pt-br', path: '/lang/pt-br/', title: 'Solent Labs™ — Open Source Network Monitoring' },
+  { code: 'es', path: '/lang/es/', title: 'Solent Labs™ — Open Source Network Monitoring' },
+  { code: 'de', path: '/lang/de/', title: 'Solent Labs™ — Open Source Network Monitoring' },
+  { code: 'fr', path: '/lang/fr/', title: 'Solent Labs™ — Open Source Network Monitoring' },
+  { code: 'zh', path: '/lang/zh/', title: 'Solent Labs™ — Open Source Network Monitoring' },
 ];
 
 test.describe('Page Rendering', () => {
@@ -17,8 +17,8 @@ test.describe('Page Rendering', () => {
       // Title is correct
       await expect(page).toHaveTitle(lang.title);
 
-      // Logo is visible
-      await expect(page.locator('header img')).toBeVisible();
+      // Logo is visible (in nav)
+      await expect(page.locator('nav img')).toBeVisible();
 
       // Building Principles section exists
       await expect(page.locator('h2').first()).toBeVisible();
@@ -54,14 +54,14 @@ test.describe('Content', () => {
     await expect(page.locator('text=Why "Solent"?')).toBeVisible();
   });
 
-  test('Building Principles section exists', async ({ page }) => {
+  test('How We Build section exists', async ({ page }) => {
     await page.goto('/');
 
-    await expect(page.locator('text=Building Principles')).toBeVisible();
+    await expect(page.locator('text=How We Build')).toBeVisible();
     await expect(page.locator('text=AI-accelerated')).toBeVisible();
-    await expect(page.locator('text=Built right')).toBeVisible();
+    await expect(page.locator('text=Systems-first')).toBeVisible();
     await expect(page.locator('text=Root cause')).toBeVisible();
-    await expect(page.locator('text=DRY by design')).toBeVisible();
+    await expect(page.locator('text=DRY architecture')).toBeVisible();
   });
 });
 
@@ -70,7 +70,7 @@ test.describe('Responsive Design', () => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('/');
 
-    await expect(page.locator('header img')).toBeVisible();
+    await expect(page.locator('nav img')).toBeVisible();
     await expect(page.locator('.lang-switcher-inline')).toBeVisible();
   });
 });

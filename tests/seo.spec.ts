@@ -89,7 +89,7 @@ test.describe('SEO Elements', () => {
     await page.goto('/');
 
     const description = page.locator('meta[name="description"]');
-    await expect(description).toHaveAttribute('content', /Bringing clarity to complex systems/);
+    await expect(description).toHaveAttribute('content', /complex systems observable/);
   });
 });
 
