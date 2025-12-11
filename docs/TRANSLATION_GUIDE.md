@@ -40,7 +40,7 @@ src/i18n/
 ### How It Works
 
 1. **English is the source** - All content is authored in `en.json`
-2. **AI generates translations** - `scripts/translate.py` uses Claude API
+2. **AI generates translations** - Using Claude Code chat (no API key needed)
 3. **Human corrections persist** - Fixes go in `overrides/*.json`
 4. **Merge at build time** - `generated + overrides` = final translation
 
@@ -49,9 +49,8 @@ src/i18n/
 ### Editing English Content
 
 1. Edit `src/i18n/en.json`
-2. Commit and push to `main`
-3. GitHub Action automatically regenerates all translations
-4. Review the auto-created PR
+2. Ask Claude Code to regenerate translations for changed content
+3. Commit and push
 
 ### Adding New Content
 
@@ -107,39 +106,30 @@ Keep these terms unchanged:
 
 ## For Developers
 
-### Running Translations Locally
+### Generating Translations
 
-```bash
-# Translate all languages
-export ANTHROPIC_API_KEY=your_key
-npm run translate
+Translations are generated using Claude Code chat:
 
-# Translate specific languages
-python scripts/translate.py de uk
+1. Open Claude Code in the project
+2. Share the content from `en.json` that changed
+3. Ask to generate translations for all 11 languages
+4. Claude outputs the updated JSON for each `generated/*.json` file
 
-# Check for missing translations
-npm run translate:check
+Example prompt:
+```
+The hero.headline changed in en.json to "New headline here".
+Please generate the translation for this key in all 11 languages
+(de, nl, fr, zh, it, es, pl, sv, ru, pt-br, uk).
 ```
 
-### Translation Script Options
+### Validating JSON
 
 ```bash
-python scripts/translate.py              # All languages
-python scripts/translate.py de uk fr     # Specific languages
-python scripts/translate.py --check      # Validate completeness
+# Check all translation files are valid JSON
+for f in src/i18n/generated/*.json; do
+  python3 -c "import json; json.load(open('$f'))" && echo "OK: $f"
+done
 ```
-
-### GitHub Action
-
-The translation workflow runs automatically when:
-- `src/i18n/en.json` changes on `main`
-- Manually triggered via workflow_dispatch
-
-It creates a PR with updated translations for review.
-
-### Required Secrets
-
-- `ANTHROPIC_API_KEY` - Claude API key for translations
 
 ## Stale Override Detection
 
