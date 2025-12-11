@@ -13,9 +13,32 @@ export function getStaticPaths() {
 
 const { locale } = Astro.params;
 const t = getTranslations(locale);
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cable Modem Monitor",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Home Assistant",
+  "description": "Home Assistant integration for monitoring DOCSIS cable modem signal quality, errors, and latency.",
+  "url": `https://solentlabs.io/${locale}/cable-modem-monitor/`,
+  "image": "https://solentlabs.io/assets/images/cmm/logo.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Solent Labs",
+    "url": "https://solentlabs.io"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "license": "https://opensource.org/licenses/MIT"
+};
 ---
 
 <BaseLayout locale={locale} title={t.cmm.meta.title} description={t.cmm.meta.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
   <div class="container">
     <header class="page-header">
       <img src="/assets/images/cmm/logo.png" alt="Cable Modem Monitor" class="hero-logo">

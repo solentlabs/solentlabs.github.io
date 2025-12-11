@@ -13,6 +13,19 @@ const t = getTranslations(locale);
 const pageTitle = title || t.meta.title;
 const pageDescription = description || t.meta.description;
 
+// Structured data for SEO
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Solent Labs",
+  "url": "https://solentlabs.io",
+  "logo": "https://solentlabs.io/assets/images/solent-labs-web.png",
+  "description": "Open source tools that make complex systems observable.",
+  "sameAs": [
+    "https://github.com/solentlabs"
+  ]
+};
+
 // Build alternate language links for SEO
 const alternateLinks = Object.keys(locales).map((lang) => ({
   hreflang: lang,
@@ -34,6 +47,7 @@ const alternateLinks = Object.keys(locales).map((lang) => ({
     <link rel="alternate" hreflang={hreflang} href={href} />
   ))}
   <link rel="alternate" hreflang="x-default" href="https://solentlabs.io/" />
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
   <script data-goatcounter="https://solentlabs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>

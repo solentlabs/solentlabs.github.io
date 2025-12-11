@@ -42,7 +42,15 @@ test.describe('CMM Product Page', () => {
   const CMM_PAGES = [
     { code: 'en', path: '/cable-modem-monitor/' },
     { code: 'de', path: '/de/cable-modem-monitor/' },
+    { code: 'nl', path: '/nl/cable-modem-monitor/' },
     { code: 'fr', path: '/fr/cable-modem-monitor/' },
+    { code: 'zh', path: '/zh/cable-modem-monitor/' },
+    { code: 'it', path: '/it/cable-modem-monitor/' },
+    { code: 'es', path: '/es/cable-modem-monitor/' },
+    { code: 'pl', path: '/pl/cable-modem-monitor/' },
+    { code: 'sv', path: '/sv/cable-modem-monitor/' },
+    { code: 'ru', path: '/ru/cable-modem-monitor/' },
+    { code: 'pt-br', path: '/pt-br/cable-modem-monitor/' },
     { code: 'uk', path: '/uk/cable-modem-monitor/' },
   ];
 
