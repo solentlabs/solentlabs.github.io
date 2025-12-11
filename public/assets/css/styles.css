@@ -80,7 +80,7 @@ body {
 }
 
 .lang-switcher-inline a {
-    color: var(--gray);
+    color: var(--white);
     text-decoration: none;
     padding: 0.25rem 0.5rem;
     border-radius: 1rem;
@@ -110,15 +110,17 @@ body {
 }
 
 .lang-switcher a {
-    color: var(--gray);
+    color: var(--white);
     text-decoration: none;
     padding: 0.25rem 0.5rem;
     border-radius: 1rem;
     transition: all 0.2s ease;
+    opacity: 0.8;
 }
 
 .lang-switcher a:hover {
     color: var(--orange);
+    opacity: 1;
 }
 
 .lang-switcher a.active {

@@ -137,7 +137,7 @@ const alternateLinks = Object.keys(locales).map((lang) => ({
       padding: 0.5rem 0.75rem;
       border-radius: 0.25rem;
       text-decoration: none;
-      color: inherit;
+      color: #ffffff;
       transition: background 0.15s;
     }
 
@@ -146,7 +146,9 @@ const alternateLinks = Object.keys(locales).map((lang) => ({
     }
 
     .lang-option.active {
-      background: rgba(99, 102, 241, 0.2);
+      background: var(--orange);
+      color: #ffffff;
+      font-weight: 500;
     }
 
     .lang-option .flag {
