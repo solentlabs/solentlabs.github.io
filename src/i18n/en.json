@@ -35,7 +35,7 @@
     },
     "rootCause": {
       "title": "Root cause:",
-      "text": "Fix the system, not the symptom. When something breaks, trace it back. Every bug is a chance to make the system more correct."
+      "text": "Fix the system, not the symptom. When something breaks, trace it back. Every bug is a chance to improve the system."
     },
     "dryArchitecture": {
       "title": "DRY architecture:",

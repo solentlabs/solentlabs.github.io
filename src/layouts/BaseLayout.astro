@@ -62,7 +62,7 @@ const alternateLinks = Object.keys(locales).map((lang) => ({
     </div>
     <div class="lang-switcher">
       <button class="lang-toggle" aria-label="Select language">
-        {locales[locale as keyof typeof locales]?.flag || '🌐'}
+        <img src={locales[locale as keyof typeof locales]?.flag} alt="" class="flag-icon" />
         <span class="lang-label">{locale.toUpperCase()}</span>
         <svg class="chevron" width="12" height="12" viewBox="0 0 12 12">
           <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none"/>
@@ -74,7 +74,7 @@ const alternateLinks = Object.keys(locales).map((lang) => ({
             href={code === 'en' ? '/' : `/${code}/`}
             class:list={['lang-option', { active: code === locale }]}
           >
-            <span class="flag">{flag}</span>
+            <img src={flag} alt="" class="flag-icon" />
             <span class="label">{label}</span>
           </a>
         ))}
@@ -165,8 +165,10 @@ const alternateLinks = Object.keys(locales).map((lang) => ({
       font-weight: 500;
     }
 
-    .lang-option .flag {
-      font-size: 1.25rem;
+    .flag-icon {
+      width: 1.25rem;
+      height: auto;
+      border-radius: 2px;
     }
 
     .lang-option .label {
