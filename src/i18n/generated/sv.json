@@ -105,7 +105,7 @@
         "text": "Fånga avbrotten kl 02 och intermittenta problem. Problem som försvinner innan du kontrollerar fångas i graferna."
       },
       "oneIntegration": {
-        "title": "En integration, 12+ modem",
+        "title": "En integration, 10+ modem",
         "text": "Arris, Motorola, Netgear, Technicolor — skriv en gång, stöd många. Varje parser testas mot verkliga enhetsinspelningar."
       },
       "haAutomation": {
@@ -121,9 +121,18 @@
     },
     "modems": {
       "title": "Stödda Modem",
-      "verified": "Verifierad",
-      "unverified": "Overifierad",
-      "contributeNote": "Ser du inte ditt modem? Du kan hjälpa till att lägga till det."
+      "tableHeaders": {
+        "manufacturer": "Tillverkare",
+        "model": "Modell",
+        "docsis": "DOCSIS",
+        "status": "Status"
+      },
+      "status": {
+        "verified": "Verifierad",
+        "inProgress": "Pågår",
+        "testing": "Testas"
+      },
+      "fullListLink": "Fullständig kompatibilitetslista"
     },
     "contribute": {
       "title": "Bidra",

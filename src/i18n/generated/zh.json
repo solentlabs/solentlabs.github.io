@@ -105,7 +105,7 @@
         "text": "捕捉凌晨2点的断开和间歇性问题。在您检查之前就消失的问题会被记录在图表中。"
       },
       "oneIntegration": {
-        "title": "一个集成，12+调制解调器",
+        "title": "一个集成，10+调制解调器",
         "text": "Arris、Motorola、Netgear、Technicolor——一次编写，支持多种。每个解析器都针对真实设备捕获进行测试。"
       },
       "haAutomation": {
@@ -121,9 +121,18 @@
     },
     "modems": {
       "title": "支持的调制解调器",
-      "verified": "已验证",
-      "unverified": "未验证",
-      "contributeNote": "没看到您的调制解调器？您可以帮助添加它。"
+      "tableHeaders": {
+        "manufacturer": "制造商",
+        "model": "型号",
+        "docsis": "DOCSIS",
+        "status": "状态"
+      },
+      "status": {
+        "verified": "已验证",
+        "inProgress": "进行中",
+        "testing": "测试中"
+      },
+      "fullListLink": "完整兼容性列表"
     },
     "contribute": {
       "title": "贡献",

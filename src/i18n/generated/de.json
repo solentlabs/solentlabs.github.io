@@ -105,7 +105,7 @@
         "text": "Erfassen Sie die Abbrüche um 2 Uhr nachts und sporadische Probleme. Probleme, die verschwinden, bevor Sie nachsehen, werden in den Grafiken festgehalten."
       },
       "oneIntegration": {
-        "title": "Eine Integration, 12+ Modems",
+        "title": "Eine Integration, 10+ Modems",
         "text": "Arris, Motorola, Netgear, Technicolor — einmal schreiben, viele unterstützen. Jeder Parser wird gegen echte Geräteerfassungen getestet."
       },
       "haAutomation": {
@@ -121,9 +121,18 @@
     },
     "modems": {
       "title": "Unterstützte Modems",
-      "verified": "Verifiziert",
-      "unverified": "Nicht verifiziert",
-      "contributeNote": "Sehen Sie Ihr Modem nicht? Sie können helfen, es hinzuzufügen."
+      "tableHeaders": {
+        "manufacturer": "Hersteller",
+        "model": "Modell",
+        "docsis": "DOCSIS",
+        "status": "Status"
+      },
+      "status": {
+        "verified": "Verifiziert",
+        "inProgress": "In Bearbeitung",
+        "testing": "In Testung"
+      },
+      "fullListLink": "Vollständige Kompatibilitätsliste"
     },
     "contribute": {
       "title": "Beitragen",

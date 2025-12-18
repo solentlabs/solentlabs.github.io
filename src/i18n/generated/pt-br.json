@@ -105,7 +105,7 @@
         "text": "Capture as quedas das 2h da manhã e problemas intermitentes. Problemas que somem quando você vai verificar ficam registrados nos gráficos."
       },
       "oneIntegration": {
-        "title": "Uma integração, 12+ modems",
+        "title": "Uma integração, 10+ modems",
         "text": "Arris, Motorola, Netgear, Technicolor — escreva uma vez, suporte muitos. Cada parser é testado contra capturas de dispositivos reais."
       },
       "haAutomation": {
@@ -121,9 +121,18 @@
     },
     "modems": {
       "title": "Modems Suportados",
-      "verified": "Verificado",
-      "unverified": "Não verificado",
-      "contributeNote": "Não vê seu modem? Você pode ajudar a adicioná-lo."
+      "tableHeaders": {
+        "manufacturer": "Fabricante",
+        "model": "Modelo",
+        "docsis": "DOCSIS",
+        "status": "Status"
+      },
+      "status": {
+        "verified": "Verificado",
+        "inProgress": "Em Andamento",
+        "testing": "Em Testes"
+      },
+      "fullListLink": "Lista completa de compatibilidade"
     },
     "contribute": {
       "title": "Contribuir",

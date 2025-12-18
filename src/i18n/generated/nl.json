@@ -105,7 +105,7 @@
         "text": "Vang de uitval om 2 uur 's nachts en intermitterende problemen. Problemen die verdwijnen tegen de tijd dat je kijkt worden vastgelegd in de grafieken."
       },
       "oneIntegration": {
-        "title": "Eén integratie, 12+ modems",
+        "title": "Eén integratie, 10+ modems",
         "text": "Arris, Motorola, Netgear, Technicolor — schrijf één keer, ondersteun velen. Elke parser is getest tegen echte apparaatopnames."
       },
       "haAutomation": {
@@ -121,9 +121,18 @@
     },
     "modems": {
       "title": "Ondersteunde Modems",
-      "verified": "Geverifieerd",
-      "unverified": "Niet geverifieerd",
-      "contributeNote": "Zie je je modem niet? Je kunt helpen het toe te voegen."
+      "tableHeaders": {
+        "manufacturer": "Fabrikant",
+        "model": "Model",
+        "docsis": "DOCSIS",
+        "status": "Status"
+      },
+      "status": {
+        "verified": "Geverifieerd",
+        "inProgress": "In Uitvoering",
+        "testing": "In Test"
+      },
+      "fullListLink": "Volledige compatibiliteitslijst"
     },
     "contribute": {
       "title": "Bijdragen",

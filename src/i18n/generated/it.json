@@ -105,7 +105,7 @@
         "text": "Cattura le disconnessioni delle 2 di notte e i problemi intermittenti. I problemi che scompaiono prima che tu controlli vengono catturati nei grafici."
       },
       "oneIntegration": {
-        "title": "Un'integrazione, 12+ modem",
+        "title": "Un'integrazione, 10+ modem",
         "text": "Arris, Motorola, Netgear, Technicolor — scrivi una volta, supporta molti. Ogni parser è testato contro catture di dispositivi reali."
       },
       "haAutomation": {
@@ -121,9 +121,18 @@
     },
     "modems": {
       "title": "Modem Supportati",
-      "verified": "Verificato",
-      "unverified": "Non verificato",
-      "contributeNote": "Non vedi il tuo modem? Puoi aiutare ad aggiungerlo."
+      "tableHeaders": {
+        "manufacturer": "Produttore",
+        "model": "Modello",
+        "docsis": "DOCSIS",
+        "status": "Stato"
+      },
+      "status": {
+        "verified": "Verificato",
+        "inProgress": "In Corso",
+        "testing": "In Test"
+      },
+      "fullListLink": "Lista completa di compatibilità"
     },
     "contribute": {
       "title": "Contribuisci",

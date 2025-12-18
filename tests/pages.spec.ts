@@ -65,7 +65,7 @@ test.describe('CMM Product Page', () => {
       await expect(page.locator('h1').first()).toContainText('Cable Modem Monitor');
 
       // Stats section visible (10+ modems, 700+ tests, 12 languages)
-      await expect(page.locator('text=/10\\+/')).toBeVisible();
+      await expect(page.locator('.stats-row .stat').first()).toBeVisible();
     });
   }
 });

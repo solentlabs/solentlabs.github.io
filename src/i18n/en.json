@@ -105,7 +105,7 @@
         "text": "Catch the 2am drops and intermittent issues. Problems that vanish by the time you check are captured in the graphs."
       },
       "oneIntegration": {
-        "title": "One integration, 12+ modems",
+        "title": "One integration, 10+ modems",
         "text": "Arris, Motorola, Netgear, Technicolor — write once, support many. Each parser is tested against real device captures."
       },
       "haAutomation": {
@@ -121,9 +121,18 @@
     },
     "modems": {
       "title": "Supported Modems",
-      "verified": "Verified",
-      "unverified": "Unverified",
-      "contributeNote": "Don't see your modem? You can help add it."
+      "tableHeaders": {
+        "manufacturer": "Manufacturer",
+        "model": "Model",
+        "docsis": "DOCSIS",
+        "status": "Status"
+      },
+      "status": {
+        "verified": "Verified",
+        "inProgress": "In Progress",
+        "testing": "Testing"
+      },
+      "fullListLink": "Full compatibility list"
     },
     "contribute": {
       "title": "Contribute",

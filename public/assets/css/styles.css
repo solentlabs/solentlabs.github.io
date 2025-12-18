@@ -841,9 +841,50 @@ h2::before {
     color: #856404;
 }
 
-.status-awaiting {
+.status-testing {
     background: #e2e3e5;
     color: #383d41;
+}
+
+/* Modem Cards Layout */
+.modem-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.modem-card {
+    background: var(--bg-light, #f8f9fa);
+    border: 1px solid var(--border-color, #dee2e6);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modem-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.modem-card-brand {
+    font-size: 0.85rem;
+    color: var(--gray, #6c757d);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.modem-card-model {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color, #212529);
+    margin-bottom: 0.5rem;
+}
+
+.modem-card .docsis-badge {
+    font-size: 0.75rem;
 }
 
 .contribute-note {

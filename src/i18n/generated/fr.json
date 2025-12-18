@@ -105,7 +105,7 @@
         "text": "Capturez les coupures de 2h du matin et les problèmes intermittents. Les problèmes qui disparaissent avant que vous ne vérifiez sont capturés dans les graphiques."
       },
       "oneIntegration": {
-        "title": "Une intégration, 12+ modems",
+        "title": "Une intégration, 10+ modems",
         "text": "Arris, Motorola, Netgear, Technicolor — écrivez une fois, supportez plusieurs. Chaque parseur est testé contre des captures de vrais appareils."
       },
       "haAutomation": {
@@ -121,9 +121,18 @@
     },
     "modems": {
       "title": "Modems Supportés",
-      "verified": "Vérifié",
-      "unverified": "Non vérifié",
-      "contributeNote": "Vous ne voyez pas votre modem ? Vous pouvez aider à l'ajouter."
+      "tableHeaders": {
+        "manufacturer": "Fabricant",
+        "model": "Modèle",
+        "docsis": "DOCSIS",
+        "status": "Statut"
+      },
+      "status": {
+        "verified": "Vérifié",
+        "inProgress": "En Cours",
+        "testing": "En Test"
+      },
+      "fullListLink": "Liste complète de compatibilité"
     },
     "contribute": {
       "title": "Contribuer",
