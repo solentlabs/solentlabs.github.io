@@ -17,7 +17,7 @@
     "title": "Products",
     "cableModemMonitor": {
       "name": "Cable Modem Monitor",
-      "description": "DOCSIS signal monitoring for Home Assistant. Track signal strength, noise margins, and errors across all your modem's channels. 10+ supported modems. 700+ tests.",
+      "description": "DOCSIS signal monitoring for Home Assistant. Track signal strength, noise margins, and errors across all your modem's channels. 15 supported modems. 875+ tests.",
       "learnMore": "Learn more",
       "github": "GitHub"
     }
@@ -68,8 +68,8 @@
       "subtitle": "Make your modem's signal data actionable.",
       "subtitleSecondary": "DOCSIS signal monitoring for Home Assistant.",
       "stats": {
-        "modems": "10+ modems",
-        "tests": "700+ tests",
+        "modems": "15 modems",
+        "tests": "875+ tests",
         "languages": "12 languages"
       }
     },
@@ -105,7 +105,7 @@
         "text": "Catch the 2am drops and intermittent issues. Problems that vanish by the time you check are captured in the graphs."
       },
       "oneIntegration": {
-        "title": "One integration, 10+ modems",
+        "title": "One integration, 15 modems",
         "text": "Arris, Motorola, Netgear, Technicolor — write once, support many. Each parser is tested against real device captures."
       },
       "haAutomation": {
